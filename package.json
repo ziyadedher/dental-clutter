@@ -4,8 +4,13 @@
   "scripts": {
     "dev": "next dev",
     "lint": "next lint",
-    "build": "next build",
-    "start": "next start"
+    "build": "npm run storage:download-bundle && next build",
+    "start": "next start",
+    "storage:setup": "gcloud auth login && gcloud config set project dentalclutter && gcloud auth application-default login",
+    "storage:download": "gcloud storage rsync --recursive gs://dentalclutter ./public",
+    "storage:upload": "gcloud storage rsync --recursive ./public gs://dentalclutter",
+    "storage:bundle": "npm run storage:download && rm -f ./public/public.tar.gz && tar -zcvf ./public/public.tar.gz ./public && npm run storage:upload",
+    "storage:download-bundle": "curl https://storage.googleapis.com/dentalclutter/public.tar.gz --output public.tar.gz && tar -zxvf public.tar.gz && rm -f public.tar.gz"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.6",
