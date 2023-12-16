@@ -1,12 +1,12 @@
-import Script from "next/script";
-import "tailwindcss/tailwind.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
+import "tailwindcss/tailwind.css";
 
 export const metadata = {
-  title: "Ziyad Edher's Webdev Template",
+  title: "Dental Clutter | Organized Files for Streamlined Smiles",
   description:
-    "A template for webapps using Next.js, Tailwind CSS, and TypeScript.",
+    "DentalClutter is an efficient, secure, and space-saving management solution for dental records and models.",
 };
 
 const GA_MEASUREMENT_ID =
