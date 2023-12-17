@@ -30,6 +30,10 @@
           {
             "pattern": "@/**",
             "group": "internal"
+          },
+          {
+            "pattern": "@public/**",
+            "group": "internal"
           }
         ],
         "newlines-between": "always",
