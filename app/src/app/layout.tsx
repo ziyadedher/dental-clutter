@@ -13,8 +13,8 @@ const GA_MEASUREMENT_ID =
   process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_MEASUREMENT_ID;
 
 const Layout = ({ children }: { children: React.ReactNode }) => (
-  <html lang="en">
-    <body>
+  <html lang="en" className="h-full bg-white">
+    <body className="h-full">
       {children}
       <Analytics />
       <SpeedInsights />
